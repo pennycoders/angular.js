@@ -741,7 +741,7 @@ function $RootScopeProvider(){
             $rootScope.$digest();
           } catch (e) {
             $exceptionHandler(e);
-            throw e;
+            throw $rootScopeMinErr('infdig',"$apply's digest did not complete.");
           }
         }
       },
